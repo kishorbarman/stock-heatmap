@@ -1,73 +1,94 @@
-# React + TypeScript + Vite
+# S&P 500 Stock Heatmap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, interactive visualization of the S&P 500 index. This application provides a real-time (approximate) overview of the stock market performance using a treemap layout, where the size of each tile corresponds to its market capitalization and the color indicates its price performance over the last trading session.
 
-Currently, two official plugins are available:
+![Stock Heatmap](public/screenshot.png) *(Placeholder for screenshot)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- **Interactive Treemap**: Visualize all S&P 500 constituents in a single view.
+- **Hierarchical Grouping**: Stocks are grouped by **Sector** and **Sub-Industry** for better context.
+- **Market Cap Weighted**: Tile sizes dynamically scale based on the relative market capitalization of each company.
+- **Performance-Based Coloring**:
+  - 🟢 **Green**: Positive price change.
+  - 🔴 **Red**: Negative price change.
+  - ⚪ **Gray**: No change or unavailable data.
+- **Real-time Data**: Fetches the latest quotes using a custom proxy to interface with market data providers.
+- **Responsive Design**: Automatically adjusts layout based on screen size using D3 and ResizeObserver.
+- **Detailed Tooltips**: Hover over any stock to see its full name, price, and percentage change.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/)
+- **Data Visualization**: [D3.js](https://d3js.org/) (for treemap tiling and color scales)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Backend**: [Firebase Functions](https://firebase.google.com/docs/functions) (Node.js) acting as a CORS proxy for financial data.
+- **Deployment**: [Firebase Hosting](https://firebase.google.com/docs/hosting)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📁 Project Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+├── api/            # Data fetching logic and API integration
+├── components/     # UI components (Heatmap, SectorGroup, StockTile, etc.)
+├── data/           # Static data (S&P 500 constituents)
+├── hooks/          # Custom React hooks (useStockData, useResizeObserver)
+├── types/          # TypeScript definitions
+└── utils/          # Treemap layout algorithms and formatters
+functions/          # Firebase Cloud Functions (Proxy server)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🏃 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (Latest LTS recommended)
+- Firebase CLI (`npm install -g firebase-tools`)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd stock_heatmap
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   cd functions && npm install && cd ..
+   ```
+
+### Running Locally
+
+1. Start the Vite development server:
+   ```bash
+   npm run dev
+   ```
+   The project includes a custom Vite plugin (`yahoo-finance-proxy`) that automatically proxies requests to `/api/quotes` during development, so you don't need to run the backend functions locally.
+
+2. (Optional) Run Firebase Functions locally to test the production proxy:
+   ```bash
+   firebase emulators:start
+   ```
+
+Note: By default, the app is configured to point to the production API or a local proxy. Ensure your `.env` (if applicable) is set up correctly.
+
+### Deployment
+
+To deploy the entire project to Firebase:
+
+```bash
+firebase deploy
 ```
+
+## 🧠 How it Works
+
+1.  **Data Fetching**: The app fetches S&P 500 constituent data from a local JSON file.
+2.  **Proxy API**: Since many financial APIs have CORS restrictions, a Firebase Cloud Function acts as a proxy, fetching real-time quotes from Yahoo Finance.
+3.  **Layout Engine**: The `treemapLayout.ts` utility uses D3's hierarchy and treemap modules to calculate the exact coordinates for each sector and stock tile based on the available screen real estate.
+4.  **Rendering**: React components render the SVG-based heatmap, using Tailwind for styling and CSS transitions for smooth updates.
+
+## 📄 License
+
+MIT
