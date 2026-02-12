@@ -14,7 +14,7 @@ export interface MarketIndexConfig {
   heatmapTitle: string;
   constituents: IndexConstituent[];
   excludedSymbols?: string[];
-  quoteSymbolSuffix?: string;
+  quoteSymbolTransformer?: (symbol: string) => string;
 }
 
 export interface StockQuote {

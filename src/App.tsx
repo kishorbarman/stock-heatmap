@@ -53,7 +53,7 @@ function App() {
         onIndexChange={handleIndexChange}
       />
       <main className="flex-1 min-h-0 p-2">
-        {state.status === 'loading' && <LoadingState />}
+        {state.status === 'loading' && <LoadingState marketLabel={activeIndex.label} />}
         {state.status === 'error' && (
           <ErrorState message={state.error} onRetry={fetchData} />
         )}

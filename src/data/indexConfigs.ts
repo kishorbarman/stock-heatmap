@@ -2,6 +2,10 @@ import sp500Constituents from './sp500-constituents.json';
 import nifty100Constituents from './nifty100-constituents.json';
 import type { MarketIndexConfig, IndexConstituent } from '../types';
 
+function withSuffix(suffix: string): (symbol: string) => string {
+  return (symbol: string) => `${symbol}${suffix}`;
+}
+
 export const MARKET_INDICES: MarketIndexConfig[] = [
   {
     id: 'sp500',
@@ -15,7 +19,7 @@ export const MARKET_INDICES: MarketIndexConfig[] = [
     label: 'Nifty 100',
     heatmapTitle: 'Nifty 100 Heatmap',
     constituents: nifty100Constituents as IndexConstituent[],
-    quoteSymbolSuffix: '.NS',
+    quoteSymbolTransformer: withSuffix('.NS'),
   },
 ];
 
@@ -28,4 +32,11 @@ export function getIndexById(indexId: string): MarketIndexConfig {
   }
 
   return MARKET_INDICES.find((index) => index.id === indexId) ?? firstIndex;
+}
+
+export function getQuoteSymbol(index: MarketIndexConfig, constituent: IndexConstituent): string {
+  const baseSymbol = constituent.quoteSymbol ?? constituent.symbol;
+  return index.quoteSymbolTransformer
+    ? index.quoteSymbolTransformer(baseSymbol)
+    : baseSymbol;
 }

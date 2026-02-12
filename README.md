@@ -99,6 +99,42 @@ firebase deploy --only hosting,functions:quotes
 4.  **Layout Engine**: The `treemapLayout.ts` utility uses D3's hierarchy and treemap modules to calculate the exact coordinates for each sector and stock tile based on the available screen real estate.
 5.  **Rendering**: React components render the SVG-based heatmap, using Tailwind for styling and CSS transitions for smooth updates.
 
+## ➕ Adding a New Market Tab
+
+To add a market (for example, Japan):
+
+1. Add a constituents file in `src/data/` (for example, `japan225-constituents.json`) with the same shape as existing market files.
+2. Add a new config entry in `src/data/indexConfigs.ts` with:
+   - `id`
+   - `label`
+   - `heatmapTitle`
+   - `constituents`
+   - Optional `excludedSymbols`
+   - Optional `quoteSymbolTransformer` (for example, `withSuffix('.T')` for Yahoo Japan symbols)
+3. Rebuild and deploy.
+
+No UI code changes are needed for new tabs because the header tabs are generated from `MARKET_INDICES`.
+
+## 🧾 Agent Notes (Implementation Summary)
+
+This section is a compact memory aid for future agents making market/index changes.
+
+- Tabs are config-driven from `MARKET_INDICES` in `src/data/indexConfigs.ts`.
+- Quote symbol mapping is centralized in `getQuoteSymbol(...)` and can be customized per market via `quoteSymbolTransformer`.
+- NIFTY uses `withSuffix('.NS')` as the reference example.
+- Data loading is protected against stale async responses in `useStockData` using a request id guard.
+- Loading copy is market-aware (`Loading {marketLabel} data...`) and should stay generic.
+- If quote/proxy behavior changes, deploy both hosting and function:
+  - `firebase deploy --only hosting,functions:quotes`
+
+### New Market Checklist (Future Agent)
+
+1. Add constituents JSON to `src/data/`.
+2. Add one `MARKET_INDICES` entry in `src/data/indexConfigs.ts`.
+3. Configure `quoteSymbolTransformer` if exchange suffix/rules are needed.
+4. Run `npm run build` and verify the new tab loads quotes.
+5. Deploy with functions when backend/proxy behavior is touched.
+
 ## 📄 License
 
 MIT

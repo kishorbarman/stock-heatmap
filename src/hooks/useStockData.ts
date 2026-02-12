@@ -1,11 +1,14 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { fetchBatchQuotes } from '../api/fmp';
 import type { StockData, DataState, MarketIndexConfig } from '../types';
+import { getQuoteSymbol } from '../data/indexConfigs';
 
 export function useStockData(indexConfig: MarketIndexConfig) {
   const [state, setState] = useState<DataState>({ status: 'idle' });
+  const requestIdRef = useRef(0);
 
   const fetchData = useCallback(async () => {
+    const requestId = ++requestIdRef.current;
     setState({ status: 'loading' });
     try {
       const excludedSymbols = new Set(indexConfig.excludedSymbols ?? []);
@@ -13,9 +16,7 @@ export function useStockData(indexConfig: MarketIndexConfig) {
         (constituent) => !excludedSymbols.has(constituent.symbol)
       );
       const symbols = typedConstituents.map((constituent) =>
-        indexConfig.quoteSymbolSuffix
-          ? `${constituent.quoteSymbol ?? constituent.symbol}${indexConfig.quoteSymbolSuffix}`
-          : constituent.quoteSymbol ?? constituent.symbol
+        getQuoteSymbol(indexConfig, constituent)
       );
       const quotes = await fetchBatchQuotes(symbols);
 
@@ -23,9 +24,7 @@ export function useStockData(indexConfig: MarketIndexConfig) {
 
       const stocks: StockData[] = typedConstituents
         .map((c) => {
-          const quoteSymbol = indexConfig.quoteSymbolSuffix
-            ? `${c.quoteSymbol ?? c.symbol}${indexConfig.quoteSymbolSuffix}`
-            : c.quoteSymbol ?? c.symbol;
+          const quoteSymbol = getQuoteSymbol(indexConfig, c);
           const quote = quoteMap.get(quoteSymbol);
           const marketCap = quote?.marketCap && quote.marketCap > 0
             ? quote.marketCap
@@ -45,8 +44,10 @@ export function useStockData(indexConfig: MarketIndexConfig) {
         })
         .filter((s): s is StockData => s !== null);
 
+      if (requestId !== requestIdRef.current) return;
       setState({ status: 'success', data: stocks, timestamp: new Date() });
     } catch (err) {
+      if (requestId !== requestIdRef.current) return;
       setState({
         status: 'error',
         error: err instanceof Error ? err.message : 'Failed to fetch stock data',
