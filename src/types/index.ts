@@ -1,9 +1,20 @@
-export interface SP500Constituent {
+export interface IndexConstituent {
   symbol: string;
+  quoteSymbol?: string;
   name: string;
   sector: string;
   subIndustry: string;
-  exchange: 'NYSE' | 'NASDAQ';
+  exchange: string;
+  fallbackMarketCap?: number;
+}
+
+export interface MarketIndexConfig {
+  id: string;
+  label: string;
+  heatmapTitle: string;
+  constituents: IndexConstituent[];
+  excludedSymbols?: string[];
+  quoteSymbolSuffix?: string;
 }
 
 export interface StockQuote {
@@ -23,7 +34,7 @@ export interface StockData {
   name: string;
   sector: string;
   subIndustry: string;
-  exchange: 'NYSE' | 'NASDAQ';
+  exchange: string;
   price: number;
   changesPercentage: number;
   marketCap: number;
@@ -39,7 +50,7 @@ export interface TreemapNode {
   marketCap?: number;
   sector?: string;
   subIndustry?: string;
-  exchange?: 'NYSE' | 'NASDAQ';
+  exchange?: string;
 }
 
 export interface TooltipData {

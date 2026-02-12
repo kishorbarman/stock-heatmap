@@ -40,7 +40,7 @@ function StockTile({ node, scale, onMouseEnter, onMouseLeave, onClick }: StockTi
     name: d.fullName ?? d.name,
     sector: d.sector ?? '',
     subIndustry: d.subIndustry ?? '',
-    exchange: d.exchange ?? 'NYSE',
+    exchange: d.exchange ?? '',
     price: 0,
     changesPercentage: change,
     marketCap: d.marketCap ?? 0,

@@ -1,0 +1,795 @@
+[
+  {
+    "symbol": "RELIANCE",
+    "name": "Reliance Industries Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 19870000000000
+  },
+  {
+    "symbol": "HDFCBANK",
+    "name": "HDFC Bank Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 14260000000000
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "name": "Bharti Airtel Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 12080000000000
+  },
+  {
+    "symbol": "SBIN",
+    "name": "State Bank of India",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 10920000000000
+  },
+  {
+    "symbol": "TCS",
+    "name": "Tata Consultancy Services Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 10520000000000
+  },
+  {
+    "symbol": "ICICIBANK",
+    "name": "ICICI Bank Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 10060000000000
+  },
+  {
+    "symbol": "INFY",
+    "name": "Infosys Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 6260000000000
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "name": "Bajaj Finance Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 6100000000000
+  },
+  {
+    "symbol": "LT",
+    "name": "Larsen & Toubro Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 5730000000000
+  },
+  {
+    "symbol": "LICI",
+    "name": "Life Insurance Corp of India",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 5640000000000
+  },
+  {
+    "symbol": "MARUTI",
+    "name": "Maruti Suzuki India Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 4760000000000
+  },
+  {
+    "symbol": "HCLTECH",
+    "name": "HCL Technologies Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 4210000000000
+  },
+  {
+    "symbol": "AXISBANK",
+    "name": "Axis Bank Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 4210000000000
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "name": "Sun Pharmaceutical Industries",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 4090000000000
+  },
+  {
+    "symbol": "ITC",
+    "name": "ITC Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 4019999999999.9995
+  },
+  {
+    "symbol": "ADANIENT",
+    "name": "Adani Enterprises Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 3860000000000
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "name": "UltraTech Cement Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 3830000000000
+  },
+  {
+    "symbol": "TITAN",
+    "name": "Titan Company Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 3780000000000
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "name": "Kotak Mahindra Bank Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 3720000000000
+  },
+  {
+    "symbol": "M&M",
+    "name": "Mahindra & Mahindra Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 3650000000000
+  },
+  {
+    "symbol": "NTPC",
+    "name": "NTPC Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 3420000000000
+  },
+  {
+    "symbol": "ADANIPOWER",
+    "name": "Adani Power Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 3210000000000
+  },
+  {
+    "symbol": "HAL",
+    "name": "Hindustan Aeronautics Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 3050000000000
+  },
+  {
+    "symbol": "ONGC",
+    "name": "Oil & Natural Gas Corp.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 3020000000000
+  },
+  {
+    "symbol": "POWERGRID",
+    "name": "Power Grid Corp.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2950000000000
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "name": "Bajaj Auto Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2730000000000
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "name": "JSW Steel Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2650000000000
+  },
+  {
+    "symbol": "ADANIGREEN",
+    "name": "Adani Green Energy Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2580000000000
+  },
+  {
+    "symbol": "COALINDIA",
+    "name": "Coal India Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2450000000000
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "name": "Adani Ports & SEZ Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2410000000000
+  },
+  {
+    "symbol": "TATASTEEL",
+    "name": "Tata Steel Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2380000000000
+  },
+  {
+    "symbol": "TATAMOTORS",
+    "name": "Tata Motors Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2350000000000
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "name": "Hindustan Unilever Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2310000000000
+  },
+  {
+    "symbol": "DLF",
+    "name": "DLF Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2150000000000
+  },
+  {
+    "symbol": "GRASIM",
+    "name": "Grasim Industries Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2080000000000
+  },
+  {
+    "symbol": "EICHERMOT",
+    "name": "Eicher Motors Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 2000000000000
+  },
+  {
+    "symbol": "SIEMENS",
+    "name": "Siemens Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1950000000000
+  },
+  {
+    "symbol": "INDIGO",
+    "name": "InterGlobe Aviation Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1910000000000
+  },
+  {
+    "symbol": "JIOFIN",
+    "name": "Jio Financial Services",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1890000000000
+  },
+  {
+    "symbol": "TRENT",
+    "name": "Trent Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1880000000000
+  },
+  {
+    "symbol": "LTIM",
+    "name": "LTIMindtree Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1670000000000
+  },
+  {
+    "symbol": "DIVISLAB",
+    "name": "Divi's Laboratories Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1630000000000
+  },
+  {
+    "symbol": "HINDALCO",
+    "name": "Hindalco Industries Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1580000000000
+  },
+  {
+    "symbol": "ZOMATO",
+    "name": "Zomato Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1520000000000,
+    "quoteSymbol": "ETERNAL"
+  },
+  {
+    "symbol": "BPCL",
+    "name": "Bharat Petroleum Corp.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1450000000000
+  },
+  {
+    "symbol": "BRITANNIA",
+    "name": "Britannia Industries Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1410000000000
+  },
+  {
+    "symbol": "GAIL",
+    "name": "GAIL (India) Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1380000000000
+  },
+  {
+    "symbol": "INDUSINDBK",
+    "name": "IndusInd Bank Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1350000000000
+  },
+  {
+    "symbol": "SHRIRAMFIN",
+    "name": "Shriram Finance Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1320000000000
+  },
+  {
+    "symbol": "BEL",
+    "name": "Bharat Electronics Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1280000000000
+  },
+  {
+    "symbol": "BAJAJHLDNG",
+    "name": "Bajaj Holdings & Inv.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1230000000000
+  },
+  {
+    "symbol": "ABB",
+    "name": "ABB India Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1220000000000
+  },
+  {
+    "symbol": "VBL",
+    "name": "Varun Beverages Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1200000000000
+  },
+  {
+    "symbol": "PNB",
+    "name": "Punjab National Bank",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1180000000000
+  },
+  {
+    "symbol": "CHOLAFIN",
+    "name": "Cholamandalam Inv & Fin",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1160000000000
+  },
+  {
+    "symbol": "HEROMOTOCO",
+    "name": "Hero MotoCorp Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1150000000000
+  },
+  {
+    "symbol": "PFC",
+    "name": "Power Finance Corp.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1120000000000
+  },
+  {
+    "symbol": "RECLTD",
+    "name": "REC Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1080000000000.0001
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "name": "Apollo Hospitals Ent.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1030000000000
+  },
+  {
+    "symbol": "WIPRO",
+    "name": "Wipro Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 1010000000000
+  },
+  {
+    "symbol": "DMART",
+    "name": "Avenue Supermarts Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 990000000000
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "name": "Asian Paints Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 980000000000
+  },
+  {
+    "symbol": "PIDILITIND",
+    "name": "Pidilite Industries Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 970000000000
+  },
+  {
+    "symbol": "SHREECEM",
+    "name": "Shree Cement Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 950000000000
+  },
+  {
+    "symbol": "TVSMOTOR",
+    "name": "TVS Motor Company Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 940000000000
+  },
+  {
+    "symbol": "AMBUJACEM",
+    "name": "Ambuja Cements Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 920000000000
+  },
+  {
+    "symbol": "NESTLEIND",
+    "name": "Nestle India Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 910000000000
+  },
+  {
+    "symbol": "BANKBARODA",
+    "name": "Bank of Baroda",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 890000000000
+  },
+  {
+    "symbol": "IOC",
+    "name": "Indian Oil Corporation",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 880000000000
+  },
+  {
+    "symbol": "TATACONSUM",
+    "name": "Tata Consumer Products",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 860000000000
+  },
+  {
+    "symbol": "TECHM",
+    "name": "Tech Mahindra Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 840000000000
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "name": "HDFC Life Insurance Co.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 810000000000
+  },
+  {
+    "symbol": "ICICIGI",
+    "name": "ICICI Lombard Gen. Ins.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 790000000000
+  },
+  {
+    "symbol": "SBILIFE",
+    "name": "SBI Life Insurance Co.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 780000000000
+  },
+  {
+    "symbol": "JSWENERGY",
+    "name": "JSW Energy Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 760000000000
+  },
+  {
+    "symbol": "CANBK",
+    "name": "Canara Bank",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 750000000000
+  },
+  {
+    "symbol": "JINDALSTEL",
+    "name": "Jindal Steel & Power",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 740000000000
+  },
+  {
+    "symbol": "DIXON",
+    "name": "Dixon Technologies Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 700000000000
+  },
+  {
+    "symbol": "GODREJCP",
+    "name": "Godrej Consumer Products",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 690000000000
+  },
+  {
+    "symbol": "CIPLA",
+    "name": "Cipla Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 680000000000
+  },
+  {
+    "symbol": "DRREDDY",
+    "name": "Dr. Reddy's Laboratories",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 670000000000
+  },
+  {
+    "symbol": "LUPIN",
+    "name": "Lupin Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 650000000000
+  },
+  {
+    "symbol": "MARICO",
+    "name": "Marico Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 640000000000
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "name": "Aurobindo Pharma Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 630000000000
+  },
+  {
+    "symbol": "COLPAL",
+    "name": "Colgate-Palmolive (I) Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 620000000000
+  },
+  {
+    "symbol": "DABUR",
+    "name": "Dabur India Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 610000000000
+  },
+  {
+    "symbol": "IDFCFIRSTB",
+    "name": "IDFC First Bank Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 600000000000
+  },
+  {
+    "symbol": "INDHOTEL",
+    "name": "Indian Hotels Co. Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 590000000000
+  },
+  {
+    "symbol": "IRCTC",
+    "name": "Indian Railway Cat. & Tour.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 580000000000
+  },
+  {
+    "symbol": "IRFC",
+    "name": "Indian Railway Fin. Corp.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 570000000000
+  },
+  {
+    "symbol": "PERSISTENT",
+    "name": "Persistent Systems Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 560000000000
+  },
+  {
+    "symbol": "MPHASIS",
+    "name": "Mphasis Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 550000000000
+  },
+  {
+    "symbol": "POLYCAB",
+    "name": "Polycab India Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 540000000000.00006
+  },
+  {
+    "symbol": "TATACOMM",
+    "name": "Tata Communications Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 530000000000
+  },
+  {
+    "symbol": "BOSCHLTD",
+    "name": "Bosch Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 520000000000
+  },
+  {
+    "symbol": "NAUKRI",
+    "name": "Info Edge (India) Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 510000000000
+  },
+  {
+    "symbol": "BERGEPAINT",
+    "name": "Berger Paints India Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 500000000000
+  },
+  {
+    "symbol": "PAGEIND",
+    "name": "Page Industries Ltd.",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 490000000000
+  },
+  {
+    "symbol": "CONCOR",
+    "name": "Container Corp. of India",
+    "sector": "Unknown",
+    "subIndustry": "Unknown",
+    "exchange": "NSE",
+    "fallbackMarketCap": 480000000000
+  }
+]

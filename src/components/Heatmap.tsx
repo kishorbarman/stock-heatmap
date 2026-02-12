@@ -8,11 +8,12 @@ import Tooltip from './Tooltip';
 
 interface HeatmapProps {
   stocks: StockData[];
+  rootName?: string;
   focusedSymbol?: string | null;
   onZoomReset?: () => void;
 }
 
-export default function Heatmap({ stocks, focusedSymbol, onZoomReset }: HeatmapProps) {
+export default function Heatmap({ stocks, rootName, focusedSymbol, onZoomReset }: HeatmapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const gRef = useRef<SVGGElement>(null);
@@ -29,9 +30,9 @@ export default function Heatmap({ stocks, focusedSymbol, onZoomReset }: HeatmapP
 
   const root = useMemo(() => {
     if (!width || !height) return null;
-    const hierarchy = buildHierarchy(stocks);
+    const hierarchy = buildHierarchy(stocks, rootName);
     return computeTreemapLayout(hierarchy, width, height);
-  }, [stocks, width, height]);
+  }, [stocks, rootName, width, height]);
 
   const leaves = useMemo(() => {
     if (!root) return [];
@@ -110,7 +111,7 @@ export default function Heatmap({ stocks, focusedSymbol, onZoomReset }: HeatmapP
         .duration(1000)
         .call(zoomBehaviorRef.current.transform, transform);
 
-  }, [focusedSymbol, leaves, width, height]);
+  }, [focusedSymbol, root, leaves, width, height]);
 
   const handleMouseEnter = useCallback(
     (e: React.MouseEvent, stock: StockData) => {
@@ -131,7 +132,8 @@ export default function Heatmap({ stocks, focusedSymbol, onZoomReset }: HeatmapP
   }, []);
 
   const handleClick = useCallback((stock: StockData) => {
-    const url = `https://www.google.com/finance/quote/${stock.symbol}:${stock.exchange}`;
+    const exchange = stock.exchange ? `:${stock.exchange}` : '';
+    const url = `https://www.google.com/finance/quote/${encodeURIComponent(stock.symbol)}${exchange}`;
     window.open(url, '_blank', 'noopener,noreferrer');
   }, []);
 
@@ -142,7 +144,7 @@ export default function Heatmap({ stocks, focusedSymbol, onZoomReset }: HeatmapP
           <g ref={gRef}>
             {leaves.map((leaf) => (
               <StockTile
-                key={leaf.data.symbol || leaf.data.name}
+                key={leaf.data.name}
                 node={leaf}
                 scale={scale}
                 onMouseEnter={handleMouseEnter}

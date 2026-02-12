@@ -1,9 +1,9 @@
 import * as d3 from 'd3';
 import type { StockData, TreemapNode } from '../types';
 
-export function buildHierarchy(stocks: StockData[]): TreemapNode {
+export function buildHierarchy(stocks: StockData[], rootName = 'Heatmap'): TreemapNode {
   return {
-    name: 'S&P 500',
+    name: rootName,
     children: stocks.map((s) => ({
       name: s.symbol,
       fullName: s.name,
@@ -21,7 +21,7 @@ export function computeTreemapLayout(
   hierarchy: TreemapNode,
   width: number,
   height: number
-) {
+): d3.HierarchyRectangularNode<TreemapNode> {
   const root = d3
     .hierarchy(hierarchy)
     .sum((d) => d.value ?? 0)
@@ -34,5 +34,5 @@ export function computeTreemapLayout(
     .tile(d3.treemapSquarify.ratio(1.618));
 
   treemap(root);
-  return root;
+  return root as d3.HierarchyRectangularNode<TreemapNode>;
 }

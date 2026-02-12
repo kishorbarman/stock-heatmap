@@ -38,7 +38,7 @@ exports.quotes = functions.https.onRequest(async (req, res) => {
 
     // Step 3: Fetch quotes
     const quoteRes = await fetch(
-      `https://query2.finance.yahoo.com/v7/finance/quote?symbols=${symbols}&crumb=${encodeURIComponent(crumb)}`,
+      `https://query2.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(symbols)}&crumb=${encodeURIComponent(crumb)}`,
       {
         headers: {
           "User-Agent": "Mozilla/5.0",
